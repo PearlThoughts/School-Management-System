@@ -9,4 +9,5 @@ module.exports = {
   rollbarEnvironment: process.env.ROLLBAR_ENVIRONMENT,
   rollbarAccessToken: process.env.ROLLBAR_ACCESS_TOKEN,
   logs: process.env.NODE_ENV === 'production' ? 'combined' : 'dev',
+  mongoseUri: process.env.MONGOOSE_URI,
 };

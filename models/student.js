@@ -1,0 +1,19 @@
+const mongoose = require('mongoose');
+const { Model, Schema } = mongoose;
+const AutoIncrement = require('mongoose-sequence')(mongoose);
+
+const UserSchema = new Schema({
+    enrollNumber: Number,
+    studentName: String,
+    fatherName: String,
+    grade: String,
+});
+UserSchema.plugin(AutoIncrement, {
+    inc_field: 'enrollNumber',
+    start_seq: 1001,
+    collection_name: 'Counter'
+});
+
+class Student extends Model { }
+
+module.exports = mongoose.model(Student, UserSchema, 'Student');

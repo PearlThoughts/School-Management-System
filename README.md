@@ -1,6 +1,6 @@
 # Express REST API Boilerplate
 
-Boilerplate/Generator/Starter Project for building RESTful APIs and microservices using Node.js, Express and Sequelize
+Boilerplate/Generator/Starter Project for building RESTful APIs and microservices using Node.js, Express and Mongoose
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Boilerplate/Generator/Starter Project for building RESTful APIs and microservice
  - Logging with [morgan](https://github.com/expressjs/morgan)
  - Error handler with [rollbar](https://rollbar.com/)
  - Tests with [jest](https://jestjs.io/) and [supertest](https://github.com/visionmedia/supertest)
- - Express + Sequelize ([sequelize](https://sequelize.org/master/index.html))
+ - Express + Mongoose ([mongoose](https://mongoosejs.com/docs/guide.html))
  - Consistent coding styles with [editorconfig](http://editorconfig.org)
  - Continuous integration support with [circleci](https://circleci.com/)
  - Authentication and Authorization with [passport](http://www.passportjs.org/)
@@ -38,12 +38,6 @@ yarn add <package-name>
 
 ```bash
 cp .env.example .env
-```
-
-#### Set database variables:
-
-```bash
-cp config/db.example.json config/db.json
 ```
 
 ## Running Locally
