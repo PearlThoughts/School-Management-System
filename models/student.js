@@ -7,6 +7,10 @@ const UserSchema = new Schema({
     studentName: String,
     fatherName: String,
     grade: String,
+    application: {
+        type: Schema.Types.ObjectId,
+        ref: 'Application'
+    }
 });
 UserSchema.plugin(AutoIncrement, {
     inc_field: 'enrollNumber',

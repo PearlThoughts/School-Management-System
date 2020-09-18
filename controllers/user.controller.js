@@ -9,7 +9,7 @@ exports.list = async (req, res, next) => {
         const students = await studentService.findAll();
         res.json(students);
     } catch (error) {
-        next(error);
+        res.json({ status: false, message: error });
     }
 };
 
@@ -22,7 +22,7 @@ exports.create = async (req, res, next) => {
         const student = await studentService.create(req.body);
         res.json(student);
     } catch (error) {
-        next(error);
+        res.json({ status: false, message: error });
     }
 };
 
@@ -43,6 +43,6 @@ exports.getStudent = async (req, res, next) => {
             res.json({ status: false, message: 'Invalid Data.' });
         }
     } catch (error) {
-        next(error);
+        res.json({ status: false, message: error });
     }
 };
